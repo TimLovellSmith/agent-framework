@@ -19,7 +19,7 @@ This folder contains an example demonstrating how to use the Redis context provi
 ### Required resources
 
 1. A running Redis with RediSearch (Redis Stack or a managed service)
-2. Python environment with Agent Framework Redis extra installed
+2. Python environment (Python >= 3.10) with Agent Framework Redis extra installed
 3. Optional: OpenAI API key if using vector embeddings
 
 ### Install the package
@@ -80,6 +80,18 @@ It uses OpenAI for both chat (via `OpenAIChatClient`) and, in some steps, option
 
 ```bash
 export OPENAI_API_KEY="<your key>"
+```
+
+Set your redis endpoint if using a cloud redis provider.
+
+```bash
+export AZURE_REDIS_HOST=contoso-instance.westus2.redis.azure.net
+```
+
+Set your object id if using Entra authentication to Azure Managed Redis.
+
+```bash
+AZURE_USER_OBJECT_ID=<object-id-guid>
 ```
 
 3) Run the example:
